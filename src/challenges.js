@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz([listNunbers]) {
+function fizzBuzz(listNunbers) {
   // seu código aqui
   let result = [];
   for (let index = 0; index < listNunbers.length; index += 1) {
@@ -80,11 +80,23 @@ function fizzBuzz([listNunbers]) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  const newCode = str.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
+  return newCode;
 }
-function decode() {
+function decode(str) {
   // seu código aqui
+  const newDecode = str.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+  return newDecode;
 }
 
 module.exports = {
