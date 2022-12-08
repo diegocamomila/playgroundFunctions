@@ -53,8 +53,24 @@ function generatePhoneNumber(listNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  const line1 = Math.abs(lineA - lineB);
+  const line2 = Math.abs(lineA - lineC);
+  const line3 = Math.abs(lineB - lineC);
+
+  if (lineA < line3) {
+    return false;
+  }
+
+  if (lineB < line2) {
+    return false;
+  }
+
+  if (lineC < line1) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
