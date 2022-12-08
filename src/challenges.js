@@ -25,13 +25,15 @@ function splitSentence(fhrase) {
 // Desafio 4
 function concatName(listArray) {
   // seu código aqui
-  let { length, 0: first, [length - 1]: last } = listArray;
+  const { length, 0: first, [length - 1]: last } = listArray;
   return `${last}, ${first}`;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  const totalPoint = (wins * 3 + ties);
+  return totalPoint;
 }
 
 // Desafio 6
