@@ -1,7 +1,11 @@
 //foco e constancia
 // Desafio 1
-function compareTrue() {
+function compareTrue(valueA, valueB) {
   // seu código aqui
+  if (valueA === true && valueB === true) {
+    return true
+  }
+    return false
 }
 
 // Desafio 2

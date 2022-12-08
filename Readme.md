@@ -334,3 +334,15 @@ String retornada:
 ## Fontes, Observaçoes e resalvas
 
 1 projeto readme e tests é do curso da trybe. https://www.betrybe.com/
+
+2 antes de iniciar instale as dependencias
+rode o comando: npm install
+
+3 Para garantir a qualidade do seu código de forma a tê-lo mais legível, usamos o Eslint
+rode o comando: npm run lint
+
+4 Para executar todos os testes
+rode o comando: npm test
+
+5 para rodar apenas um teste
+rode o comando npm test <nome do teste>
