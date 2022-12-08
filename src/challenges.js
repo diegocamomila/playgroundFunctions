@@ -1,3 +1,4 @@
+//foco e constancia
 // Desafio 1
 function compareTrue() {
   // seu código aqui
