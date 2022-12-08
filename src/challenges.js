@@ -23,8 +23,10 @@ function splitSentence(fhrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(listArray) {
   // seu código aqui
+  let { length, 0: first, [length - 1]: last } = listArray;
+  return `${last}, ${first}`;
 }
 
 // Desafio 5
