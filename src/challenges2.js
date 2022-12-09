@@ -74,8 +74,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(phrase) {
   // seu código aqui
+  const theNum = phrase.match(/\d+/g);
+
+  let total = 0;
+  let newArray = theNum.map((index) => Number(index));
+  let result = newArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue, total,
+  );
+
+  if (result < 2) {
+    return `${result} copo de água`;
+  }
+  return `${result} copos de água`;
 }
 
 module.exports = {
