@@ -20,21 +20,23 @@ function techList(tech, name) {
 }
 
 // complemento desafio 11
-const test = (listNumbers) => {
-  listNumbers.sort();
-  let current = null;
+function test(listNumbers) {
+  const Numbers = [...listNumbers];
   let cnt = 0;
+  let current = null;
+  Numbers.sort();
 
-  for (let index = 0; index < listNumbers.length; index += 1) {
-    if (listNumbers[index] !== current) {
-      current = listNumbers[index];
-    } else cnt += 1;
+  for (let index = 0; index < Numbers.length; index += 1) {
+    if (Numbers[index] !== current) {
+      current = Numbers[index];
+      cnt = 0;
+    } if ((cnt) >= 2) {
+      return true;
+    } if (Numbers[index] === current) {
+      cnt += 1;
+    } else return false;
   }
-
-  if (cnt === 3) {
-    return true;
-  }
-};
+}
 
 // Desafio 11
 function generatePhoneNumber(listNumbers) {
@@ -46,10 +48,8 @@ function generatePhoneNumber(listNumbers) {
   if (test(listNumbers) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
-  let phone = `(${listNumbers.slice(0, 2).join('')}) ${listNumbers.slice(2, 7).join('')}-${
+  return `(${listNumbers.slice(0, 2).join('')}) ${listNumbers.slice(2, 7).join('')}-${
     listNumbers.slice(7, 11).join('')}`;
-  return phone;
 }
 
 // Desafio 12
